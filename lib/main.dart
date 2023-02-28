@@ -8,10 +8,11 @@ void main() => runApp(
       DevicePreview(
         enabled: true,
         builder: (context) => MaterialApp(
+          debugShowCheckedModeBanner: false,
             useInheritedMediaQuery: true,
             locale: DevicePreview.locale(context),
             builder: DevicePreview.appBuilder,
-            debugShowCheckedModeBanner: false,
+            
             home: const Eziticket()), // Wrap your app
       ),
     );
@@ -27,9 +28,10 @@ class _EziticketState extends State<Eziticket> {
   @override
   void initState() {
     Timer(const Duration(seconds: 5), () {
-      Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (BuildContext context) => 
-      const BuyTicket()));
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+              builder: (BuildContext context) => const BuyTicket()));
     });
     super.initState();
   }
@@ -73,7 +75,6 @@ class _EziticketState extends State<Eziticket> {
 
   buildcontainer2() => Expanded(
         child: AnimatedContainer(
-
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(

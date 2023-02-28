@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(debugShowCheckedModeBanner: false, home: Ticket()),
-  );
-}
+// void main() {
+//   runApp(
+//     const MaterialApp(debugShowCheckedModeBanner: false, home: Ticket()),
+//   );
+// }
 
 class Ticket extends StatefulWidget {
   const Ticket({Key? key}) : super(key: key);
@@ -264,5 +264,4 @@ class _TicketState extends State<Ticket> {
               alignment: Alignment.center, child: Text('2463759468204776E0')),
         ],
       );
-
 }

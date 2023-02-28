@@ -1,4 +1,5 @@
 import 'package:backend/checkout.dart';
+import 'package:flutter/foundation.dart';
 import 'passwordreset.dart';
 import 'package:backend/class.dart';
 import 'package:backend/selectSeat.dart';
@@ -8,16 +9,16 @@ import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 //import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        home: const Accessscreen()),
-  );
-}
+// void main() {
+//   runApp(
+//     MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         theme: ThemeData(
+//           visualDensity: VisualDensity.adaptivePlatformDensity,
+//         ),
+//         home: const Accessscreen()),
+//   );
+// }
 
 class Accessscreen extends StatefulWidget {
   const Accessscreen({Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class _AccessscreenState extends State<Accessscreen> {
 
   bool isPasswordVissible = false;
   bool checki = false;
-  static List title = ['Create an account (optional)'];
+  //static List title = ['Create an account (optional)'];
   final List<Checkmarklist> checkmark = [
     Checkmarklist(
       title: 'Create an account ',
@@ -207,7 +208,9 @@ class _AccessscreenState extends State<Accessscreen> {
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => const passwordScreen()));
-                            print('Forgot password');
+                            if (kDebugMode) {
+                              print('Forgot password');
+                            }
                           },
                           child: const Padding(
                             padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -244,9 +247,11 @@ class _AccessscreenState extends State<Accessscreen> {
                                 alignment: Alignment.topLeft,
                                 child: TextButton(
                                   onPressed: () {
-                                    print('Sign in with google');
+                                    if (kDebugMode) {
+                                      print('Sign in with google');
+                                    }
                                   },
-                                  child: Container(
+                                  child: SizedBox(
                                     width: 40,
                                     height: 40,
                                     child: ClipRRect(
@@ -288,9 +293,15 @@ class _AccessscreenState extends State<Accessscreen> {
                                     ),
                                   ),
                                   onPressed: () {
-                                    print('Continue As Guest');
-                                    print('Email:${emailController.text}');
-                                    print('Password:${psswordController}');
+                                    if (kDebugMode) {
+                                      print('Continue As Guest');
+                                    }
+                                    if (kDebugMode) {
+                                      print('Email:${emailController.text}');
+                                    }
+                                    if (kDebugMode) {
+                                      print('Password:$psswordController');
+                                    }
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -590,9 +601,9 @@ class _AccessscreenState extends State<Accessscreen> {
                                                                           debugPrint(
                                                                               'Phone:${numberController.text}');
 
-                                                                          final Form =
+                                                                          final form =
                                                                               _formkey.currentState!;
-                                                                          if (Form
+                                                                          if (form
                                                                               .validate()) {
                                                                             setState(() {
                                                                               isChecked = true;
@@ -638,7 +649,7 @@ class _AccessscreenState extends State<Accessscreen> {
   phonenumbercheckbox(StateSetter setState) => Checkbox(
       value: isChecked7,
       // ignore: non_constant_identifier_names
-      onChanged: (Checked) => setState(() {
+      onChanged: (checked) => setState(() {
             isChecked7 = !isChecked7;
           }),
       checkColor: CupertinoColors.white,
@@ -647,7 +658,7 @@ class _AccessscreenState extends State<Accessscreen> {
   citycheckbox(StateSetter setState) => Checkbox(
       value: isChecked6,
       // ignore: non_constant_identifier_names
-      onChanged: (Checked) => setState(() {
+      onChanged: (checked) => setState(() {
             isChecked6 = !isChecked6;
           }),
       checkColor: CupertinoColors.white,
@@ -656,7 +667,7 @@ class _AccessscreenState extends State<Accessscreen> {
   regioncheckbox(StateSetter setState) => Checkbox(
       value: isChecked5,
       // ignore: non_constant_identifier_names
-      onChanged: (Checked) => setState(() {
+      onChanged: (checked) => setState(() {
             isChecked5 = !isChecked5;
           }),
       checkColor: CupertinoColors.white,
@@ -664,7 +675,7 @@ class _AccessscreenState extends State<Accessscreen> {
 
   passwordcheckbox(StateSetter setState) => Checkbox(
       value: isChecked4,
-      onChanged: (Checked) => setState(() {
+      onChanged: (checked) => setState(() {
             isChecked4 = !isChecked4;
           }),
       checkColor: CupertinoColors.white,
@@ -672,7 +683,7 @@ class _AccessscreenState extends State<Accessscreen> {
 
   emailcheckbox(StateSetter setState) => Checkbox(
       value: isChecked3,
-      onChanged: (Checked) => setState(() {
+      onChanged: (checked) => setState(() {
             isChecked3 = !isChecked3;
           }),
       checkColor: CupertinoColors.white,
@@ -680,14 +691,14 @@ class _AccessscreenState extends State<Accessscreen> {
 
   dobcheckbox(StateSetter setState) => Checkbox(
       value: isChecked2,
-      onChanged: (Checked) => setState(() {
+      onChanged: (checked) => setState(() {
             isChecked2 = !isChecked2;
           }),
       checkColor: CupertinoColors.white,
       activeColor: CupertinoColors.activeGreen);
   lnamecheckbox(setState) => Checkbox(
       value: isChecked1,
-      onChanged: (Checked) => setState(() {
+      onChanged: (checked) => setState(() {
             isChecked1 = !isChecked1;
           }),
       checkColor: CupertinoColors.white,
@@ -695,7 +706,7 @@ class _AccessscreenState extends State<Accessscreen> {
 
   fnamecheckbox(setState) => Checkbox(
       value: isChecked,
-      onChanged: (Checked) => setState(() {
+      onChanged: (checked) => setState(() {
             isChecked = !isChecked;
           }),
       checkColor: CupertinoColors.white,
@@ -775,10 +786,14 @@ class _AccessscreenState extends State<Accessscreen> {
               alignment: Alignment.center,
               child: TextButton(
                 onPressed: () {
-                  print('Email:${emailController.text}');
-                  print('Password:${psswordController.text}');
-                  final Form = formkey.currentState!;
-                  if (Form.validate()) {
+                  if (kDebugMode) {
+                    print('Email:${emailController.text}');
+                  }
+                  if (kDebugMode) {
+                    print('Password:${psswordController.text}');
+                  }
+                  final form = formkey.currentState!;
+                  if (form.validate()) {
                     setState(() {});
                   }
                 },
@@ -792,7 +807,7 @@ class _AccessscreenState extends State<Accessscreen> {
         ),
       );
 
-  BuildCheckboxListTile(Checkmarklist checkmark) => Padding(
+  buildCheckboxListTile(Checkmarklist checkmark) => Padding(
         padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
         child: (CheckboxListTile(
             value: checkmark.value,

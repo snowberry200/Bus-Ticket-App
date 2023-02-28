@@ -6,12 +6,12 @@ import 'package:flutter/cupertino.dart';
 import 'new_password_add.dart';
 import 'register.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: passwordScreen(),
-  ));
-}
+// void main() {
+//   runApp(const MaterialApp(
+//     debugShowCheckedModeBanner: false,
+//     home: passwordScreen(),
+//   ));
+// }
 
 class passwordScreen extends StatefulWidget {
   const passwordScreen({Key? key}) : super(key: key);

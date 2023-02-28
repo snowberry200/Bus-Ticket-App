@@ -4,12 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:email_validator/email_validator.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-        debugShowCheckedModeBanner: false, home: RegisterScreen()),
-  );
-}
+// void main() {
+//   runApp(
+//     const MaterialApp(
+//         debugShowCheckedModeBanner: false, home: RegisterScreen()),
+//   );
+// }
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -153,7 +153,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         (const Padding(
                           padding: EdgeInsets.only(bottom: 10, top: 20),
                           child: Center(
-                            child: Text('Registeration',
+                            child: Text('Registration',
                                 style: TextStyle(
                                     fontSize: 28,
                                     color: CupertinoColors.darkBackgroundGray)),

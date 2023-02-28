@@ -9,11 +9,11 @@ import 'package:flutter/cupertino.dart';
 // import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 // import 'package:backend/generated_plugin_registrant.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(debugShowCheckedModeBanner: false, home: selectSeat()),
-  );
-}
+// void main() {
+//   runApp(
+//     const MaterialApp(debugShowCheckedModeBanner: false, home: selectSeat()),
+//   );
+// }
 
 class selectSeat extends StatefulWidget {
   const selectSeat({Key? key}) : super(key: key);

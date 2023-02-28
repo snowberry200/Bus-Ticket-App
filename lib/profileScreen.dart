@@ -61,10 +61,10 @@ class _ProfileState extends State<Profile> {
   ];
   final List<infolist> notificationinfo = [
     infolist(
-
       notification: CupertinoIcons.bell,
       color: Colors.red,
-      title: 'Notification', trailiangicon: CupertinoIcons.forward,
+      title: 'Notification',
+      trailiangicon: CupertinoIcons.forward,
     )
   ];
   final List<infolist> otherinfo = [
@@ -325,7 +325,6 @@ class ItemSettings {
   ItemSettings({required this.text, required this.icon});
 }
 
-
 class infolist {
   String title;
   dynamic color;
@@ -340,4 +339,3 @@ class infolist {
       required this.color,
       required this.trailiangicon});
 }
-

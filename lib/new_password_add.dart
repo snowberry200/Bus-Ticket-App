@@ -132,7 +132,7 @@ class _newPasswordState extends State<newPassword> {
               const Padding(
                 padding: EdgeInsets.fromLTRB(30, 20, 20, 20),
                 child: Text(
-                    "Hint: the password should be at-least 6 characters long. To make it stronger, use uppercase andlower case letters,numbers and symbols."),
+                    "Hint: the password should be at-least 6 characters long. To make it stronger, use uppercase and lower case letters,numbers and symbols."),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(30, 20, 20, 20),
