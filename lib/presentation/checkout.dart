@@ -1,9 +1,9 @@
 // ignore_for_file: camel_case_types, unused_field, unnecessary_const, avoid_print
 
 import 'dart:math';
-import 'package:backend/confirmation.dart';
-import 'package:backend/login.dart';
-import 'package:backend/profileScreen.dart';
+import 'package:backend/presentation/confirmation.dart';
+import 'package:backend/presentation/login.dart';
+import 'package:backend/presentation/profileScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';

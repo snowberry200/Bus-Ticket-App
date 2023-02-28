@@ -1,6 +1,6 @@
 // ignore_for_file: camel_case_types
 
-import 'package:backend/passwordreset.dart';
+import 'package:backend/presentation/passwordreset.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 

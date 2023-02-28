@@ -1,8 +1,8 @@
-import 'package:backend/checkout.dart';
+import 'package:backend/presentation/checkout.dart';
 import 'package:flutter/foundation.dart';
 import 'passwordreset.dart';
-import 'package:backend/class.dart';
-import 'package:backend/selectSeat.dart';
+import 'package:backend/presentation/class.dart';
+import 'package:backend/presentation/selectSeat.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

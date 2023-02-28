@@ -1,6 +1,6 @@
 // ignore_for_file: camel_case_types, avoid_print, file_names
 
-import 'package:backend/seatContainer.dart';
+import 'package:backend/presentation/seatContainer.dart';
 import 'login.dart';
 import 'package:flutter/material.dart';
 import 'coachesScreen.dart';

@@ -1,8 +1,8 @@
 // ignore_for_file: camel_case_types, non_constant_identifier_names, avoid_unnecessary_containers, avoid_print, avoid_types_as_parameter_names, unused_field, file_names
 
-import 'package:backend/sortingItems.dart/date.dart';
-import 'package:backend/sortingItems.dart/price.dart';
-import 'package:backend/sortingItems.dart/sortsettings.dart';
+import 'package:backend/widgets/sortingItems.dart/date.dart';
+import 'package:backend/widgets/sortingItems.dart/price.dart';
+import 'package:backend/widgets/sortingItems.dart/sortsettings.dart';
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

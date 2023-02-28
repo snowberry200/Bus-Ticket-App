@@ -1,8 +1,8 @@
 // ignore_for_file: camel_case_types, avoid_print, annotate_overrides
 
 import 'dart:async';
-import 'package:backend/buyTicket.dart';
-import 'package:backend/ticket.dart';
+import 'package:backend/presentation/buyTicket.dart';
+import 'package:backend/presentation/ticket.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'coachesScreen.dart';

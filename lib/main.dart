@@ -1,7 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'buyTicket.dart';
+import 'presentation/buyTicket.dart';
 import 'package:flutter/cupertino.dart';
 
 void main() => runApp(

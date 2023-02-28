@@ -1,10 +1,10 @@
 // ignore_for_file: non_constant_identifier_names, avoid_types_as_parameter_names, camel_case_types, file_names
 
-import 'package:backend/buyTicket.dart';
-import 'package:backend/settingsItems/complains.dart';
+import 'package:backend/presentation/buyTicket.dart';
+import 'package:backend/widgets/settingsItems/complains.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'settingsItems/settings.dart';
+import '../widgets/settingsItems/settings.dart';
 
 void main() {
   runApp(
