@@ -64,7 +64,7 @@ class _passwordScreenState extends State<passwordScreen> {
                 const Padding(
                   padding: EdgeInsets.only(bottom: 50),
                   child: Text(
-                    'to sent you password reset',
+                    'to send you password reset',
                     style: TextStyle(
                         color: Colors.grey,
                         fontSize: 16,

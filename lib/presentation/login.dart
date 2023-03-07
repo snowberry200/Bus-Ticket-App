@@ -7,18 +7,6 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
-//import 'package:shared_preferences/shared_preferences.dart';
-
-// void main() {
-//   runApp(
-//     MaterialApp(
-//         debugShowCheckedModeBanner: false,
-//         theme: ThemeData(
-//           visualDensity: VisualDensity.adaptivePlatformDensity,
-//         ),
-//         home: const Accessscreen()),
-//   );
-// }
 
 class Accessscreen extends StatefulWidget {
   const Accessscreen({Key? key}) : super(key: key);
@@ -28,6 +16,16 @@ class Accessscreen extends StatefulWidget {
 }
 
 class _AccessscreenState extends State<Accessscreen> {
+  RegExp passValid = RegExp(r"(?=.*\d{2,4})(?=.*[A-Z])(?=.*\W)");
+  bool passwordValidate(String pass) {
+    String password = pass.trim();
+    if (passValid.hasMatch(password)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   final emailController = TextEditingController();
   final psswordController = TextEditingController();
 
@@ -575,8 +573,16 @@ class _AccessscreenState extends State<Accessscreen> {
                                                                           if (password != null &&
                                                                               password.length < 6) {
                                                                             return 'Please enter correct password ';
-                                                                          } else {
+                                                                          }
+                                                                          bool
+                                                                              result =
+                                                                              passwordValidate(password as String);
+                                                                          if (result) {
                                                                             return null;
+
+                                                                          }
+                                                                          else{
+                                                                            return 'please enter correct password';
                                                                           }
                                                                         }),
                                                                   ),
